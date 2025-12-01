@@ -2,9 +2,6 @@ path = "./data.txt"
 
 dial = 50
 result = 0
-rights = 0
-lefts = 0
-
 
 with open(path, "r") as file:
     for line in file:
@@ -16,7 +13,7 @@ with open(path, "r") as file:
             result += (dial + move) // 100
             dial = (dial + move) % 100
         else:
-            result += ((100 - dial)%100 + move) // 100
+            result += ((100 - dial) % 100 + move) // 100
             dial = (dial - move) % 100
 
 print(result)
