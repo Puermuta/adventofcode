@@ -6,7 +6,6 @@ data = [list(line.rstrip("\n")) for line in open(path)]
 def project_beam(col: int, row:int, data: list[int], visited) -> None:
     total = 0
     while data[row][col] != "^":
-        data[row][col] = '|'
         row += 1
         if row == len(data):
             return 1
